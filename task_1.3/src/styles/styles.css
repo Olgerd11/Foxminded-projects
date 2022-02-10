@@ -1,0 +1,232 @@
+/*style reset*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/* ===================== styles =======================*/
+body {
+  font-size: 62.5%;
+  color: white;
+  padding-top: 7vh;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 1.4rem;
+  padding-bottom: 10px;
+}
+
+.slider {
+  max-width: 75vw;
+  height: 75vh;
+  margin: 0 auto;
+  font-size: 1rem;
+}
+
+.slider__wrapper {
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider__wrapper .slider__item-container {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+}
+
+.slider__wrapper .slider__item-container .slider-item {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: 50% 0%;
+}
+
+.slider__wrapper .slider__item-container .slider-item .slider__article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 50%;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  top: 70%;
+  z-index: 0;
+}
+
+.slider__wrapper .slider__item-container .slider-item .slider-item__arrow {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-top: 8px solid white;
+  border-left: 8px solid white;
+  opacity: 0.5;
+  position: relative;
+  top: 35%;
+  z-index: 1;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.slider__wrapper .slider__item-container .slider-item .slider-item__arrow:hover {
+  opacity: 1;
+}
+
+.slider__wrapper .slider__item-container .slider-item .slider-item__arrow--prev {
+  left: 6%;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.slider__wrapper .slider__item-container .slider-item .slider-item__arrow--next {
+  left: calc(94% - 60px);
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
+.slider__wrapper .slider__item-container .slider-item--1 {
+  background-image: url("../img/forest.png");
+}
+
+.slider__wrapper .slider__item-container .slider-item--2 {
+  background-image: url("../img/lake.png");
+}
+
+.slider__wrapper .slider__item-container .slider-item--3 {
+  background-image: url("../img/moon.png");
+}
+
+.slider__wrapper .slider__dot-wrapper {
+  max-width: 100px;
+  position: -webkit-sticky;
+  position: sticky;
+  left: 50%;
+  bottom: 5vh;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.slider__wrapper .slider__dot-wrapper .slider__dot {
+  display: block;
+  border: 2px solid white;
+  border-radius: 50%;
+  background-color: transparent;
+  width: 18px;
+  height: 18px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.slider__wrapper .slider__dot-wrapper .slider__dot:hover {
+  background-color: white;
+}
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/bike-fav.svg" type="image/x-icon">
+    <title>About us</title>
+</head>
+<body>
+    <div class="container grid-container">
+        <header class="header grid-item grid-item--1">
+            <div class="header__container">
+                <img src="img/bike-fav.svg" alt="bike" class="header__img">
+                <a href="index.html" class="header__title">
+                    Bikeshop.com
+                </a>
+            </div>
+        </header>
+        <nav class="nav grid-item grid-item--2">
+            <ul class="nav__menu">
+                <li class="nav__item nav__item--1">
+                    <a href="index.html">Home</a>
+                </li>
+                <li class="nav__item active nav__item--2">
+                    <a href="#">About us</a>
+                </li>
+                <li class="nav__item nav__item--3">
+                    <a href="contact-page.html">Contacts</a>
+                </li>
+            </ul>
+        </nav>
+        <main class="main grid-item grid-item--3 about-us-flex">
+            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1228.8002910844978!2d7.600177093570217!3d51.97770627269438!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b9ba9b4692bd23%3A0x8f2c400da7614a90!2zU3RlaW5mdXJ0ZXIgU3RyLiAxNTAsIDQ4MTQ5IE3DvG5zdGVyLCDQndGW0LzQtdGH0YfQuNC90LA!5e0!3m2!1suk!2sua!4v1644142513857!5m2!1suk!2sua" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <address class="address">
+                <span>You can contact author at</span> <a href="index.html">www.bikeshop.com</a>.<br>
+                You may also want to visit us:<br>
+                Steinfurter Str. 150, 48149 Münster, Germany
+
+            </address>
+        </main>
+        <aside class="sidebar grid-item grid-item--4">
+            <form method="post" id="sidebar-form" class="form">
+                <div class="sidebar__search search">
+                    <input type="search" placeholder="search..." name="search" id="search" class="search__area">
+                </div>
+                <div class="sidebar__calendar calendar">
+                    <label for="calendar" class="calendar__label">
+                        Choose the date
+                    </label>
+                    <input type="date" name="calendar" id="calendar" class="calendar__date-area">
+                </div>
+            </form>
+        </aside>
+        <footer class="footer grid-item grid-item--5">
+            <p class="footer__copyright">
+                © 1989-2022, Bike shop
+            </p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,421 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300;400&family=Roboto:wght@300;400&display=swap');
+$gray: #878787;
+$light-gray: #e6e6e6;
+$red: #ff6666;
+$orange: #ff931d;
+$yellow: #ffbe17;
+$white: white;
+
+
+/*style reset*/
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,
+*:before,
+*:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,
+:active {
+	outline: none;
+}
+a:focus,
+a:active {
+	outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+	display: block;
+}
+
+html,
+body {
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,
+button,
+textarea {
+	font-family: inherit;
+}
+
+input::-ms-clear {
+	display: none;
+}
+button {
+	cursor: pointer;
+}
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+a,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+ul li {
+	list-style: none;
+}
+img {
+	vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: inherit;
+	font-weight: 400;
+}
+
+/*=========================== styles ===========================*/
+html {
+	font-size: 10px;
+	margin: 0 auto;
+}
+
+body {
+	font-size: 62.5%;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	line-height: 1.6rem;
+}
+
+.container {
+	font-size: 1.3rem;
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	gap: 25px;
+	padding: 20px 0 20px 0;
+}
+
+.item {
+	display: flex;
+	flex-flow: row wrap;
+	max-width: 400px;
+	justify-content: space-between;
+	padding: 10px 20px 10px 15px;
+	border: 1px solid $orange;
+
+	.item__discount-container {
+		width: 58px;
+		height: 58px;
+		background-color: $orange;
+		border-radius: 50%;
+		text-align: center;
+		margin: -5px 10px 0 -5px;
+		.item__discount {
+			display: inline-block;
+			font-size: 1.7rem;
+			color: $white;
+			position: relative;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+
+	}
+	.item__img {
+		width: auto;
+		min-height: 250px;
+		max-width: 80%;
+		object-fit: contain;
+		padding-right: 15%;
+	}
+
+	.item__price,
+	.item__old-price,
+	.item__store-name {
+		padding-bottom: 15px;
+		padding-top: 30px;
+	}
+
+	.item__price {
+		width: 25%;
+		font-family: 'Dosis', sans-serif;
+		font-size: 2.5rem;
+		font-weight: 400;
+		text-align: center;
+		color: $orange;
+	}
+
+	.item__old-price {
+		width: 50%;
+		font-size: 1.2rem;
+		align-self: flex-end;
+		position: relative;
+		margin-bottom: -5px;
+		&::before {
+			content: "";
+			display: inline-block;
+			width: 20%;
+			border-top: 2px solid gray;
+			transform: rotate(15deg);
+			position: absolute;
+			bottom: 22px;
+		}
+	}
+
+	.item__store-name {
+		width: 25%;
+		text-align: end;
+		align-self: center;
+		padding-right: 10px;
+	}
+
+	.item__text {
+		width: 100%;
+		padding: 15px 0 15px 15px;
+		font-size: 1.4rem;
+		border-top: 2px dashed $light-gray;
+		border-bottom: 2px dashed $light-gray;
+	}
+
+	.item__footer {
+		width: 33.3%;
+		padding-top: 10px;
+	}
+
+	/* ------ footer modifications ---------*/
+	.item__footer--1 {
+		padding-left: 20px;
+	}
+	.item__footer--2 {
+		text-align: center;
+	}
+	.item__footer--3 {
+		text-align: end;
+		padding-right: 10px;
+	}
+}
+
+/*------ items modifications ---------*/
+
+.item--4,
+.item--5 {
+	border: 1px solid $yellow;
+	.item__discount-container {
+		background-color: $yellow;
+	}
+	.item__price {
+		color: $yellow;
+	}
+}
+
+.item--1 {
+	border: 1px solid $red;
+	.item__discount-container {
+		background-color: $red;
+	}
+	.item__price {
+		color: $red;
+	}
+}
+
+.item--2 {
+	.item__footer--1,
+	.item__footer--3 {
+		display: none;
+	}
+
+	.item__footer--2 {
+		width: 100%;
+	}
+}
+
+.item--3 {
+	.item__footer--3 {
+		display: none;
+	}
+
+	.item__footer--1,
+	.item__footer--2 {
+		width: 50%;
+		text-align: center;
+	}
+}
+
+.item--4 {
+	.item__footer--2,
+	.item__footer--3 {
+		display: none;
+	}
+
+	.item__footer--1 {
+		width: 100%;
+		text-align: center;
+	}
+}
+
+.item--2,
+.item--3,
+.item--4,
+.item--5 {
+	.item__price,
+	.item__old-price,
+	.item__store-name {
+		padding-top: 0px;
+	}
+}
+
+/* ========= media queries =========*/
+
+@media (min-width: 992px) {
+	
+	.grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr 1fr;
+		gap: 0;
+		align-items: end;
+		justify-items: center;
+		max-width: 900px;
+		margin: 0 auto;
+
+		.grid__item--1 {
+			grid-column: 1 / 2;
+			grid-row: 1 / 3;
+		}
+		.grid__item--2 {
+			grid-column: 2 / 3;
+			grid-row: 1 / 2;
+			align-self: start;
+		}
+		.grid__item--3 {
+			grid-column: 2 / 3;
+			grid-row: 2 / 3;
+		}
+		.grid__item--4 {
+			grid-column: 1 / 2;
+			grid-row: 3 / 4;
+		}
+		.grid__item--5 {
+			grid-column: 2 / 3;
+			grid-row: 3 / 4;
+			align-self: end;
+		}
+	}
+
+	.item {
+		max-width: 420px;
+	}
+
+	.item--1 {
+		width: 100%;
+	}
+
+	.item--2,
+	.item--3,
+	.item--4,
+	.item--5 {
+		position: relative;
+		max-height: 210px;
+		width: 100%;
+
+		.item__discount-container {
+			position:absolute;
+		}
+
+		.item__img {
+			min-height: 0;
+			order: 2;
+			width: 40%;
+			padding: 0;
+			object-fit: contain;
+		}
+
+		.item__text {
+			order: 1;
+			width: 60%;
+			padding-top: 70px;
+			border: 0;
+		}
+
+		.item__price {
+			order: 3;
+			padding: 0 0 10px 0;
+		}
+
+		.item__old-price {
+			order: 4;
+			padding: 0 0 10px 10px;
+			&::before {
+				bottom: 17px;
+			}
+		}
+
+		.item__store-name {
+			order: 5;
+			padding: 0 0 10px 0;
+		}
+
+		.item__footer {
+			order: 6;
+			border-top: 2px dashed $light-gray;
+		}
+	}
+
+	.item--3,
+	.item--4 {
+		.item__img {
+			width: 28%;
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+		gap: 15px;
+		max-width: 1200px;
+		margin: 0 auto;
+
+		.grid__item--1 {
+			grid-column: 1 / 2;
+			grid-row: 1 / 3;
+		}
+		.grid__item--2 {
+			grid-column: 2 / 3;
+			grid-row: 1 / 2;
+		}
+		.grid__item--3 {
+			grid-column: 2 / 3;
+			grid-row: 2 / 3;
+		}
+		.grid__item--4 {
+			grid-column: 3 / 4;
+			grid-row: 1 / 2;
+			align-self: start;
+		}
+		.grid__item--5 {
+			grid-column: 3 / 4;
+			grid-row: 2 / 3;
+		}
+	}
+
+	.item {
+		max-width: 400px;
+		align-self: auto;
+	}
+}

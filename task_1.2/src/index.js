@@ -1,0 +1,9 @@
+import '/styles/reset.css';
+import '/styles/styles.scss';
+import '/img/bears.jpg';
+import '/img/cage.jpg';
+import '/img/cat.jpg';
+import '/img/monsters.jpg';
+import '/img/monsters_1.jpg';
+import '/img/monsters_2.jpg';
+import '/img/monsters_3.jpg';

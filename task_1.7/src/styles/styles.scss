@@ -1,0 +1,115 @@
+$container: #666666;
+$inner-container: #CBCBCB;
+$button-shadow: #646464;
+$button-background-top-up: #DCDCDC;
+$button-background-top-down: #D2D2D2;
+$button-background-bottom-up: #C7C7C7;
+$button-background-bottom-down: #ADADAD;
+$font-color: #555555;
+
+@font-face {
+    font-family: 'Segoe UI';
+    src: url('../fonts/SegoeUI-Bold.eot');
+    src: url('../fonts/SegoeUI-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SegoeUI-Bold.woff2') format('woff2'),
+        url('../fonts/SegoeUI-Bold.woff') format('woff'),
+        url('../fonts/SegoeUI-Bold.svg#SegoeUI-Bold') format('svg'),
+        url('../fonts/SegoeUI-Bold.ttf') format('ttf');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-size: 62.5%;
+    padding-top: 20vh;
+    font-family: "Segoe UI", sans-serif;
+
+}
+
+.container {
+    width: 270px;
+    height: 80px;
+    border: 2px solid $container;
+    margin: 0 auto;
+    border-radius: 8% / 25%;
+    padding: 2px;
+
+    &:hover {
+        border: 3px solid $container;
+    }
+
+    &:hover .wrap {
+        background: linear-gradient(to top, transparent 0, transparent 40%, $button-background-bottom-down 40%, $button-background-bottom-up 100%);
+    }
+
+    &:hover .wrap::after {
+        background: linear-gradient(to top, white 0, white 40%, $button-background-top-down 40%, $button-background-top-up 100%);
+    }
+}
+
+.inner-container {
+    width: 100%;
+    height: 100%;
+    background-color: $inner-container;
+    border-radius: 8% / 25%;
+    padding: 6px;
+
+    .wrap {
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to top, white 0, white 40%, $button-background-top-down 40%, $button-background-top-up 100%);
+        border-radius: 5% / 20%;
+        box-shadow: 1px 1px 2px 1px $button-shadow;
+        position: relative;
+        overflow: hidden;
+
+        &::after {
+            content: "";
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, transparent 0, transparent 40%, $button-background-bottom-down 40%, $button-background-bottom-up 100%);
+            border-radius: 3% / 10%;
+            position: absolute;
+            left: 0;
+            top: 50%;
+        }
+
+        .button {
+            color: $font-color;
+            font-size: 2.6rem;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            background-color: transparent;
+            position: relative;
+
+            &::before {
+                content: url('../img/star9.svg');
+                position: absolute;
+                left: 6%;
+                top: 25%;
+            }
+
+            &::after {
+                content: url('../img/star9.svg');
+                position: absolute;
+                right: 6%;
+                top: 25%;
+            }
+        }
+    }
+}
+
+.container:hover .button::after {
+    content: url('../img/star10.svg');
+}
+
+.container:hover .button::before {
+    content: url('../img/star10.svg');
+}

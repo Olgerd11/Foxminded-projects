@@ -1,0 +1,91 @@
+$pink: #870d4f;
+$violet: #4a148b;
+$orange: #e65000;
+$brown: #be350d;
+$litegreen: rgb(45, 206, 72);
+
+html {
+	font-size: 24px;
+	text-align: center;
+}
+
+body {
+	font-size: 1rem;
+}
+
+.header__title {
+	font-size: 1.5rem;
+	font-weight: bold;
+	color: $litegreen;
+	padding-bottom: 20px;
+}
+
+.menu {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.menu__link:hover {
+	color: green;
+	font-size: 1.2rem;
+	margin-top: -6px;
+	margin-left: -8px;
+}
+
+/* =========== Flex section ============= */
+
+.main-part--flex {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	.main-part__container--size--large {
+		height: 480px;
+		width: 145px;
+		background-color: $orange;
+	}
+	.main-part__container--size--small {
+		width: 145px;
+		height: 160px;
+	}
+	.main-part__container--position--bottom {
+		align-self: flex-end;
+		background-color: $pink;
+	}
+	.main-part__container--position--center {
+		align-self: center;
+		background-color: $violet;
+	}
+	.main-part__container--position--top {
+		background-color: $brown;
+	}
+}
+
+/*===========Grid section============*/
+
+.grid-container {
+	margin: auto;
+	height: 480px;
+	width: 580px;
+	display: inline-block;
+	display: grid;
+	grid-template-columns: repeat(4, 25%);
+	.grid-item--1 {
+		grid-row: 3 / 4;
+		background-color: $pink;
+	}
+	.grid-item--2 {
+		grid-column: 2 / 3;
+		grid-row: 2 / 3;
+		background-color: $violet;
+	}
+	.grid-item--3 {
+		grid-column: 3 / 4;
+		grid-row: 1 / 4;
+		background-color: $orange;
+	}
+	.grid-item--4 {
+		grid-column: 4 / 5;
+		grid-row: 1 / 2;
+		background-color: $brown;
+	}
+}
